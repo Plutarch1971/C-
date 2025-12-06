@@ -1,0 +1,15 @@
+/Users/matthewmendez/bootcamp/continuation-course/C#/MyApp-Data-Array/MyAppData.Array/bin/Debug/net6.0/MyAppData.Array
+/Users/matthewmendez/bootcamp/continuation-course/C#/MyApp-Data-Array/MyAppData.Array/bin/Debug/net6.0/MyAppData.Array.deps.json
+/Users/matthewmendez/bootcamp/continuation-course/C#/MyApp-Data-Array/MyAppData.Array/bin/Debug/net6.0/MyAppData.Array.runtimeconfig.json
+/Users/matthewmendez/bootcamp/continuation-course/C#/MyApp-Data-Array/MyAppData.Array/bin/Debug/net6.0/MyAppData.Array.dll
+/Users/matthewmendez/bootcamp/continuation-course/C#/MyApp-Data-Array/MyAppData.Array/bin/Debug/net6.0/MyAppData.Array.pdb
+/Users/matthewmendez/bootcamp/continuation-course/C#/MyApp-Data-Array/MyAppData.Array/obj/Debug/net6.0/MyAppData.Array.csproj.AssemblyReference.cache
+/Users/matthewmendez/bootcamp/continuation-course/C#/MyApp-Data-Array/MyAppData.Array/obj/Debug/net6.0/MyAppData.Array.GeneratedMSBuildEditorConfig.editorconfig
+/Users/matthewmendez/bootcamp/continuation-course/C#/MyApp-Data-Array/MyAppData.Array/obj/Debug/net6.0/MyAppData.Array.AssemblyInfoInputs.cache
+/Users/matthewmendez/bootcamp/continuation-course/C#/MyApp-Data-Array/MyAppData.Array/obj/Debug/net6.0/MyAppData.Array.AssemblyInfo.cs
+/Users/matthewmendez/bootcamp/continuation-course/C#/MyApp-Data-Array/MyAppData.Array/obj/Debug/net6.0/MyAppData.Array.csproj.CoreCompileInputs.cache
+/Users/matthewmendez/bootcamp/continuation-course/C#/MyApp-Data-Array/MyAppData.Array/obj/Debug/net6.0/MyAppData.Array.dll
+/Users/matthewmendez/bootcamp/continuation-course/C#/MyApp-Data-Array/MyAppData.Array/obj/Debug/net6.0/refint/MyAppData.Array.dll
+/Users/matthewmendez/bootcamp/continuation-course/C#/MyApp-Data-Array/MyAppData.Array/obj/Debug/net6.0/MyAppData.Array.pdb
+/Users/matthewmendez/bootcamp/continuation-course/C#/MyApp-Data-Array/MyAppData.Array/obj/Debug/net6.0/MyAppData.Array.genruntimeconfig.cache
+/Users/matthewmendez/bootcamp/continuation-course/C#/MyApp-Data-Array/MyAppData.Array/obj/Debug/net6.0/ref/MyAppData.Array.dll

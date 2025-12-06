@@ -1,0 +1,159 @@
+## How to add this project to git hub?
+GitHub Copilot
+The message you are seeing is from Git's default text editor (vim in this case), which is prompting you to enter a commit message for the merge. To proceed, follow these steps:
+
+Steps to Fix the Issue:
+1. Initialize a Git Repository
+Open the terminal in the root directory of your project (e.g., EmployeeManagement) and run:
+git init
+2. Add Files to the Repository
+Add all files in your project to the staging area:
+git add .
+
+Write the Commit Message:
+3. Commit the Files
+Commit the added files with a descriptive message:
+git commit -m "Initial commit for EmployeeManagement project"
+4. Create a Repository on GitHub
+Go to GitHub and log in.
+Click the New button (usually next to your profile picture) to create a new repository.
+Enter a repository name (e.g., EmployeeManagement), add an optional description, and choose whether it should be public or private.
+Click Create repository.
+5. Link Your Local Repository to GitHub
+Copy the repository URL from GitHub (e.g., https://github.com/yourusername/EmployeeManagement.git) and run the following command in your terminal:
+
+git remote add origin https://github.com/yourusername/EmployeeManagement.git
+6. Push Your Code to GitHub
+Push your local commits to the GitHub repository:
+git branch -M main
+git push -u origin main
+7. Verify on GitHub
+Go to your GitHub repository page, and you should see your project files uploaded.
+
+Optional: Add a .gitignore File
+Before committing, you may want to create a .gitignore file to exclude unnecessary files (e.g., build artifacts). For a C# project, you can use the following .gitignore:
+bin/
+obj/
+*.user
+*.suo
+*.log
+*.tmp
+*.pdb
+## When I pushed I got error msg, how to fix these error?
+
+You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint:
+hint: git config pull.rebase false # merge
+hint: git config pull.rebase true # rebase
+hint: git config pull.ff only # fast-forward only
+hint:
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+matthewmendez@Matthews-MacBook-Pro EmployeeManagement % 
+## Solution:
+The error occurs because your local branch and the remote branch have diverged, and Git needs to know how to handle the differences. You can resolve this by choosing one of the following commands based on your preference:
+
+1. Merge (Default Behavior)
+If you want to merge the changes from the remote branch into your local branch, run:
+git config pull.rebase false
+git pull
+This will create a merge commit to combine the changes.
+2. Rebase
+If you want to reapply your local changes on top of the remote branch (linear history), run:
+git config pull.rebase true
+git pull
+Note: This rewrites the commit history to avoid merge commits.
+3. Fast-Forward Only
+If you want to pull only if the remote branch is ahead of your local branch (no divergent changes), run:
+git config pull.ff only
+git pull
+This will fail if there are conflicting changes between the branches.
+4. Set Global Default
+If you want to set a default behavior for all repositories, add the --global flag. For example:
+
+To always merge:
+git config --global pull.rebase false
+To always rebase:
+git config --global pull.rebase true
+To always fast-forward:
+git config --global pull.ff only
+Recommendation:
+If you're unsure, start with the merge option (git config pull.rebase false) as it is the safest and most common approach.
+
+## When I used first method: 
+git config pull.rebase false
+git pull
+## I got errors, how to fix it?
+1. Force Pull to Merge Unrelated Histories
+Run the following command to allow merging unrelated histories:
+git pull origin main --allow-unrelated-histories
+
+Note: This will merge the remote repository's history with your local repository. You may be prompted to resolve merge conflicts if there are any differences between the two repositories.
+2. Resolve Merge Conflicts (If Any)
+If there are merge conflicts, Git will pause and ask you to resolve them. Open the conflicting files in your editor (e.g., Visual Studio Code), resolve the conflicts, and then stage the resolved files:
+git add <file_with_conflict>
+
+After resolving all conflicts, commit the changes:
+git commit -m "Resolved merge conflicts"
+
+3. Push the Changes to the Remote Repository
+Once the histories are merged, push your local branch to the remote repository:
+git push origin main
+
+4. Set Upstream Tracking (Optional)
+To avoid specifying the remote and branch every time you pull or push, set the upstream branch:
+git branch --set-upstream-to=origin/main main
+Note: Now you can simply use git pull or git push without specifying the remote and branch.
+
+Summary of Commands:
+git pull origin main --allow-unrelated-histories
+# Resolve conflicts if prompted
+git add <file_with_conflict>
+git commit -m "Resolved merge conflicts"
+git push origin main
+git branch --set-upstream-to=origin/main main
+Note: After completing these steps, your local branch will be successfully pushed to the remote repository, and the histories will be synchronized.
+## HOW TO FIX THIS ERROR?Merge branch 'main' of https://github.com/Plutarch1971/EmployeeManagement
+
+Please enter a commit message to explain why this merge is necessary,
+especially if it merges an updated upstream into a topic branch.
+Lines starting with '#' will be ignored, and an empty message aborts
+tht commit.
+git commit -m "Merge to remote repo from local repo"
+
+Lines starting with '#' will be ignored, and an empty message aborts
+tht commit.
+git commit -m "Merge to remote repo from local repo"
+
+-- INSERT --
+The message you are seeing is from Git's default text editor (vim in this case), which is prompting you to enter a commit message for the merge. To proceed, follow these steps:
+
+Steps to Fix the Issue:
+Write the Commit Message:
+
+The default message is already provided: Merge branch 'main' of https://github.com/Plutarch1971/EmployeeManagement.
+If you are okay with this message, you don't need to change anything.
+Save and Exit the Editor:
+
+## Press Esc to exit insert mode (if you are in insert mode).
+## Type :wq (write and quit) and press Enter.
+This will save the commit message and complete the merge.
+
+If You Want to Abort the Merge:
+If you do not want to proceed with the merge, you can abort it by doing the following:
+
+Press Esc to exit insert mode.
+## Type :q! and press Enter.
+This will quit the editor without saving the commit message, and the merge will be aborted.
+
+After Completing the Merge:
+Once the merge is complete, you can push the changes to the remote repository:
+git push origin main
+This will synchronize your local branch with the remote repository.
+
+ 
